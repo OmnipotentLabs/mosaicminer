@@ -2,18 +2,21 @@
 
 
 ### Install WSL
+- Click the Start menu and open Powershell as admin
+- Set the default version of WSL
+
 ```sh
 wsl --set-default-version 2
 wsl --update
 wsl --install -d Ubuntu-22.04 
 ```
 
-# Update Ubuntu
+### Update Ubuntu
 ```sh
 sudo apt update && sudo apt -y upgrade
 ```
 
-# Get CUDA working on WSL
+### Get CUDA working on WSL
 ```sh
 wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
 sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
@@ -24,7 +27,7 @@ sudo apt-get update
 sudo apt-get -y install cuda-toolkit-12-4
 ```
 
-# Docker setup
+### Docker setup
 
 Uninstall older versions of docker
 ```sh
@@ -85,7 +88,7 @@ sudo apt-get install -y nvidia-container-toolkit
 ```
 
 
-# Install dependencies
+### Install dependencies
 ```sh
 sudo apt install -y python3 git curl npm pipx python3-pip && pipx ensurepath && pipx install poetry && pip install communex && sudo npm install pm2 -g
 ```
@@ -101,18 +104,18 @@ nano ~/.bashrc
 ```
 
 
-# Test comx (you need to restart the shell first for communex to work)
+### Test comx (you need to restart the shell first for communex to work)
 ```sh
 comx module list
 ```
 
-# Create key
+### Create key
 1. Replace <key-name> with the name you want
 ```sh
 comx key create <key-name>
 ```
 
-# Useful command, find seed for newly created key
+### Useful command, find seed for newly created key
 1. Replace <key-name>
 
 ```sh
@@ -120,7 +123,7 @@ comx key show --show-private <key-name>
 ```
 
 
-# Setup Mosaic
+### Setup Mosaic
 
 Clone Mosaic repo
 ```sh
@@ -147,7 +150,7 @@ Get your public IP
 curl -4 https://ipinfo.io/ip
 ```
 
-# Register a module
+### Register a module
 1. Replace ```<module-name>``` with the name of your module
 2. Replace ```<key-name>``` with the name of your key
 3. Replace ```<netuid>``` with 14 for Mosaic mainnet or 13 for testnet
@@ -158,7 +161,7 @@ curl -4 https://ipinfo.io/ip
 comx module register <module-name> <key-name> --netuid=<netuid> --ip=<ip> --port=<port>
 ```
 
-# Miner setup
+### Miner setup
 1. Replace ```<key-name>``` with your key
 2. Replace ```<host>``` with 0.0.0.0 to allow connection from any IP
 3. Replace ```<port>``` with the same port as the registered module
