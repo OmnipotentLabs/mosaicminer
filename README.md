@@ -78,6 +78,11 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo docker run hello-world
 ```
 
+- Add user to Docker group
+```sh
+sudo usermod -aG docker $USER
+```
+
 ### Installing the NVIDIA Container Toolkit
 - Configure the production repository
 ```sh
