@@ -63,7 +63,7 @@ Verify that the Docker Engine installation is successful by running the hello-wo
 sudo docker run hello-world
 ```
 
-# Installing the NVIDIA Container Toolkit
+### Installing the NVIDIA Container Toolkit
 
 Configure the production repository
 ```sh
