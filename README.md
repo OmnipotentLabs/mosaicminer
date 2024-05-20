@@ -145,8 +145,12 @@ poetry install
 curl -4 https://ipinfo.io/ip
 ```
 
-# Register a module, replace <module-name> with the name of your module, replace <key> with the name of your key
-# replace <ip> with public IP of your miner, <port> with the port you want to use and <netuid> with 14 for Mosaic mainnet or 13 for testnet
+# Register a module
+1. Replace <module-name> with the name of your module
+2. Replace <key> with the name of your key
+3. Replace <ip> with public IP of your miner
+4. Replace <port> with the port you want to use
+5. Replace <netuid> with 14 for Mosaic mainnet or 13 for testnet
 ```sh
 comx module register <module-name> <key> --netuid=<netuid> --ip=<ip> --port=<port>
 ```
