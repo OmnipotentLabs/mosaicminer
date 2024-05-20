@@ -68,7 +68,7 @@ echo \
 sudo apt-get update
 ```
 
-- To install the latest version of Docker
+- Install the latest version of Docker
 ```sh
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 ```
