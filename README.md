@@ -111,13 +111,13 @@ comx module list
 ```
 
 ### Create key
-1. Replace <key-name> with the name you want
+- Replace <key-name> with the name you want
 ```sh
 comx key create <key-name>
 ```
 
 ### Useful command, find seed for newly created key
-1. Replace <key-name>
+- Replace <key-name>
 
 ```sh
 comx key show --show-private <key-name>
