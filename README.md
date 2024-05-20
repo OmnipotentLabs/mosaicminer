@@ -1,4 +1,7 @@
-# Install WSL
+# Setup Commune on Windows 10 Pro/Enterprise without Docker Desktop
+
+
+### Install WSL
 ```sh
 wsl --set-default-version 2
 wsl --update
