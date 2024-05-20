@@ -4,6 +4,7 @@
 ### Install WSL
 - Click the Start menu and open Powershell as admin
 - Set the default version of WSL
+- Install Ubuntu-22.04
 
 ```sh
 wsl --set-default-version 2
