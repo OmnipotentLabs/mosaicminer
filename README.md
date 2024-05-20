@@ -213,13 +213,13 @@ docker ps -a
 ```
 
 - Check logs
-- Replace <docker-container>
+- Replace ```<docker-container>```
 ```sh
 docker logs <docker-container>
 ```
 
 - Tail logs
-- Replace <docker-container>
+- Replace ```<docker-container>```
 ```sh
 docker logs --follow <docker-container>
 ```
