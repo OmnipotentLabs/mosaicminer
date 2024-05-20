@@ -188,6 +188,10 @@ comx module register <module-name> <key-name> --netuid=<netuid> --ip=<ip> --port
 ```sh
 python mosaic_subnet/cli.py --log-level=INFO miner <key-name> <host> <port>
 ```
+### Restart Docker Service
+```sh
+sudo systemctl restart docker
+```
 
 ### Running with Docker (Recommended)
 We recommend you use Docker to run the miner. The deployment with this method can make the services more robust and enable automatic upgrades.
@@ -202,3 +206,26 @@ docker run --gpus=all -d --network host --restart always \
 mos4ic/mosaic-subnet:latest \
 python mosaic_subnet/cli.py --log-level=INFO miner <key-name> <host> <port>
 ```
+
+- Check running Docker images
+```sh
+docker ps -a
+```
+
+- Check logs
+- Replace <docker-container>
+```sh
+docker logs <docker-container>
+```
+
+
+
+
+
+
+
+
+
+
+
+
