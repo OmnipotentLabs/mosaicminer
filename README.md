@@ -189,6 +189,7 @@ comx module register <module-name> <key-name> --netuid=<netuid> --ip=<ip> --port
 python mosaic_subnet/cli.py --log-level=INFO miner <key-name> <host> <port>
 ```
 ### Restart Docker Service
+If you have not rebooted since installing Docker, it is recommended to restart the service or Docker will not find your GPU
 ```sh
 sudo systemctl restart docker
 ```
