@@ -224,14 +224,11 @@ docker logs <docker-container>
 docker logs --follow <docker-container>
 ```
 
-
-
-
-
-
-
-
-
-
-
-
+### Enable auto upgrade
+This component will periodically check the latest mosaic docker image, pull it and restart the running containers with the new image.
+```sh
+docker run -d \
+--name watchtower \
+-v /var/run/docker.sock:/var/run/docker.sock \
+containrrr/watchtower --interval 300 mosaic-miner mosaic-validator 
+```
