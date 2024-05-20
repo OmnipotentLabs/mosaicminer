@@ -8,7 +8,11 @@
 
 ```sh
 wsl --set-default-version 2
+```
+```sh
 wsl --update
+```
+```sh
 wsl --install -d Ubuntu-22.04 
 ```
 
@@ -20,11 +24,23 @@ sudo apt update && sudo apt -y upgrade
 ### Get CUDA working on WSL
 ```sh
 wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
+```
+```sh
 sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
+```
+```sh
 wget https://developer.download.nvidia.com/compute/cuda/12.4.1/local_installers/cuda-repo-wsl-ubuntu-12-4-local_12.4.1-1_amd64.deb
+```
+```sh
 sudo dpkg -i cuda-repo-wsl-ubuntu-12-4-local_12.4.1-1_amd64.deb
+```
+```sh
 sudo cp /var/cuda-repo-wsl-ubuntu-12-4-local/cuda-*-keyring.gpg /usr/share/keyrings/
+```
+```sh
 sudo apt-get update
+```
+```sh
 sudo apt-get -y install cuda-toolkit-12-4
 ```
 
