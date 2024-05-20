@@ -21,7 +21,7 @@ sudo apt-get update
 sudo apt-get -y install cuda-toolkit-12-4
 ```
 
-# uninstall and reinstall docker
+# Uninstall and reinstall docker
 ```sh
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 ```
@@ -113,56 +113,59 @@ comx key create <key-name>
 ```
 
 
-# useful command, find seed for created key. Replace <key-name>
+# Useful command, find seed for newly created key
+1. Replace <key-name>
+
 ```sh
 comx key show --show-private <key-name>
 ```
 
 
-# clone this project
+# Clone Mosaic repo
 ```sh
 git clone https://github.com/mosaicx-org/mosaic-subnet
 ```
 
+# Open Mosaic folder
 ```sh
 cd mosaic-subnet
 ```
 
-
-# start virtualenv and enter it
+# Start virtualenv and enter it
 ```sh
 poetry shell
 ```
 
-
-# install dependencies
+# Install dependencies for Mosaic
 ```sh
 poetry install
 ```
 
-# Get public IP
+# Get your public IP
 ```sh
 curl -4 https://ipinfo.io/ip
 ```
 
 # Register a module
 1. Replace ```<module-name>``` with the name of your module
-2. Replace <key> with the name of your key
-3. Replace <ip> with public IP of your miner
-4. Replace <port> with the port you want to use
-5. Replace <netuid> with 14 for Mosaic mainnet or 13 for testnet
+2. Replace ```<key-name>``` with the name of your key
+3. Replace ```<netuid>``` with 14 for Mosaic mainnet or 13 for testnet
+4. Replace ```<ip>``` with public IP of your miner
+5. Replace ```<port>``` with the port you want to use
+
 ```sh
-comx module register <module-name> <key> --netuid=<netuid> --ip=<ip> --port=<port>
+comx module register <module-name> <key-name> --netuid=<netuid> --ip=<ip> --port=<port>
 ```
 
-comx module register my-miner-go mykey --netuid=14 --ip=213.164.201.138 --port=8200
+# Miner setup
+1. Replace ```<key-name>``` with your key
+2. Replace ```<host>``` with 0.0.0.0 to allow connection from any IP
+3. Replace ```<port>``` with the same port as the registered module
 
-# Miner setup, relace <host> with 0.0.0.0 to allow connection from anywhere, replace <port> with same port as registered module
 ```sh
-python mosaic_subnet/cli.py [--testnet] [--log-level=INFO] miner <your_commune_key> <host> <port>
+python mosaic_subnet/cli.py --log-level=INFO miner <key-name> <host> <port>
 ```
 
-python mosaic_subnet/cli.py --log-level=INFO miner mykey 0.0.0.0 8200
 
 
 
