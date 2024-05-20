@@ -13,7 +13,7 @@ wsl --set-default-version 2
 wsl --update
 ```
 ```sh
-wsl --install -d Ubuntu-22.04 
+wsl --install
 ```
 
 ### Update Ubuntu
